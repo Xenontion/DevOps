@@ -2,7 +2,7 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const publicDir = path.join(__dirname, 'public');
 
 const server = http.createServer((req, res) => {
@@ -72,5 +72,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

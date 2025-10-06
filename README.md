@@ -1,43 +1,58 @@
-# My Node.js Project
+# DevOps Project
 
-This project is a simple Node.js application that serves a static HTML page. It demonstrates how to set up an HTTP server using Node.js and serve files from a public directory.
+This project is a simple HTTP server that serves static files from a public directory. It is built using Node.js and can be deployed on platforms like Heroku.
 
 ## Project Structure
 
 ```
-my-nodejs-project
+DevOps
 ├── src
-│   ├── server.js        # Entry point of the Node.js application
+│   ├── server.js        # Main server file
 │   └── public
-│       └── index.html   # Simple HTML page served by the application
-├── package.json         # npm configuration file
-└── README.md            # Documentation for the project
+│       └── index.html   # Main HTML file served by the server
+├── package.json         # NPM configuration file
+└── README.md            # Project documentation
 ```
 
-## Setup Instructions
+## Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```
    git clone <repository-url>
-   cd my-nodejs-project
    ```
-
-2. **Install dependencies:**
+2. Navigate to the project directory:
+   ```
+   cd DevOps
+   ```
+3. Install the dependencies:
    ```
    npm install
    ```
 
-3. **Run the server:**
-   ```
-   node src/server.js
-   ```
-
-4. **Access the application:**
-   Open your browser and navigate to `http://localhost:3000` to view the test page.
-
 ## Usage
 
-This application serves a static HTML page located in the `src/public` directory. You can modify the `index.html` file to change the content displayed in the browser.
+To start the server locally, run:
+```
+npm start
+```
+
+The server will be running on `http://localhost:3000`.
+
+## Deployment on Heroku
+
+1. Make sure you have the Heroku CLI installed and you are logged in.
+2. Create a new Heroku app:
+   ```
+   heroku create
+   ```
+3. Deploy the application:
+   ```
+   git push heroku main
+   ```
+4. Open the application in your browser:
+   ```
+   heroku open
+   ```
 
 ## License
 
